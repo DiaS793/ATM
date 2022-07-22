@@ -13,4 +13,9 @@ public class Atm {
     public void deposit(int amountToDeposit) {
         balance +=amountToDeposit;
     }
+
+    public void withdraw(int amountToWithdraw) {
+        if(amountToWithdraw <= balance)
+        balance -=amountToWithdraw;
+    }
 }

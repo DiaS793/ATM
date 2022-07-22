@@ -3,10 +3,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AtmTest {
-    @Test
-    public void shouldHaveADefaultBalanceof50(){
+
         //Arrange
-        Atm underTest = new Atm(50);
+        Atm underTest = new Atm(50, "1234");
+
+    @Test
+    public void shouldHaveADefaultBalanceOf50(){
         //Act
         int actualBalance = underTest.getBalance();
         //Assert
@@ -26,9 +28,26 @@ public class AtmTest {
 
     @Test
     public void depositOf50ShouldIncreaseQAnInitialBalanceOf50To100(){
-        Atm underTest = new Atm(50);
         underTest.deposit(50);
         int actualBalance = underTest.getBalance();
         assertEquals(100, actualBalance);
+    }
+
+    @Test
+    public void withdrawOf50ShouldDecreaseAnInitialBalanceOf50To0(){
+        underTest.withdraw(50);
+        int actualBalance = underTest.getBalance();
+        assertEquals(0,actualBalance);
+    }
+
+    @Test
+    public void withdrawOf51ShouldReturnOriginalBalanceOf50(){
+        underTest.withdraw(51);
+        int actualBalance = underTest.getBalance();
+        assertEquals(50,actualBalance);
+    }
+    @Test
+    public void shouldAllowUserAccessWithCorrectPin(){
+        Atm underTest
     }
 }

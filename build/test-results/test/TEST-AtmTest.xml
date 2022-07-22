@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AtmTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-07-21T00:54:39" hostname="DIADESKTOP" time="0.015">
+<testsuite name="AtmTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-07-22T04:02:19" hostname="DIADESKTOP" time="0.016">
   <properties/>
   <testcase name="shouldHaveADefaultBalanceOf100()" classname="AtmTest" time="0.013"/>
-  <testcase name="shouldHaveADefaultBalanceof50()" classname="AtmTest" time="0.0"/>
-  <testcase name="depositOf50ShouldIncreaseQAnInitialBalanceOf50To100()" classname="AtmTest" time="0.001"/>
+  <testcase name="withdrawOf51ShouldReturnOriginalBalanceOf50()" classname="AtmTest" time="0.001"/>
+  <testcase name="shouldHaveADefaultBalanceOf50()" classname="AtmTest" time="0.0"/>
+  <testcase name="depositOf50ShouldIncreaseQAnInitialBalanceOf50To100()" classname="AtmTest" time="0.0"/>
+  <testcase name="withdrawOf50ShouldDecreaseAnInitialBalanceOf50To0()" classname="AtmTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
