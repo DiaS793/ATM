@@ -18,7 +18,7 @@ public class AtmTest {
     @Test
     public void shouldHaveADefaultBalanceOf100(){
         //Arrange
-        Atm underTest = new Atm(100);
+        Atm underTest = new Atm(100, "1234");
         //Act
         int actualBalance = underTest.getBalance();
         //Assert
@@ -48,6 +48,13 @@ public class AtmTest {
     }
     @Test
     public void shouldAllowUserAccessWithCorrectPin(){
-        Atm underTest
+        boolean accessResult = underTest.accessAccount("1234");
+        assertEquals(true,accessResult);
+    }
+
+    @Test
+    public void shouldDenyUserAccessWithIncorrectPin(){
+        boolean accessResult = underTest.accessAccount("1111");
+        assertEquals(false,accessResult);
     }
 }
