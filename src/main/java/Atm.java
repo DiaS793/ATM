@@ -4,8 +4,9 @@ public class Atm {
     private String pin;
 
     //constructor/object/ATM
-    public Atm(int balance, String s) {
+    public Atm(int balance, String pin) {
         this.balance = balance;
+        this.pin = pin;
     }
 
     //getter to get the balance when called
@@ -13,7 +14,7 @@ public class Atm {
         return balance;
     }
 
-    //methods of behavior or how the object (ATM) behaved
+    //methods of behavior or how the object (ATM) behaves
     public void deposit(int amountToDeposit) {
         balance += amountToDeposit;
     }
